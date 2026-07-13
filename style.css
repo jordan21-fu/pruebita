@@ -5,7 +5,7 @@ body {
     scroll-behavior: smooth;
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(150deg, rgb(9, 21, 65) 0%, rgb(16, 47, 114) 25%, rgb(10, 76, 197) 50%, rgb(22, 57, 134) 75%,  rgb(18, 43, 133) 100%);
+
 }
 
 a {
@@ -68,20 +68,28 @@ nav ul li.textoOpcion {
     transition: 0.5s;
 }
 
-nav ul li.textoOpcion a{
+nav ul li.textoOpcion a {
     transition: 0.3s;
 }
-nav ul li.textoOpcion{
+
+nav ul li.textoOpcion {
     transition: 0.5s;
 }
 
-nav ul li.textoOpcion:hover{
-    transform: translateY(-5px);
+nav ul li.textoOpcion:hover {
+    transform: translateY(-3px);
+    background-color: #08103f;
+    border: 1px solid #298ffc;
+    padding: 0 7px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    border-radius: 15px;
 }
 
-nav ul li a:hover{
-    color: #4da3ff;
+nav ul li a:hover {
+    color: #298ffc;
 }
+
 section#principal {
     position: relative;
     width: 100%;
@@ -113,10 +121,11 @@ section h1#titulo {
     /*filter: hue-rotate(240deg);*/
     filter: hue-rotate(-20deg);
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 0px;
     display: block;
     position: static;
+    object-fit: cover;
 }
 
 .subtitulo {
@@ -151,6 +160,8 @@ section h1#titulo {
     height: auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(150deg, rgb(9, 21, 65) 0%, rgb(4, 0, 49) 25%, rgb(10, 76, 197) 50%, rgb(22, 57, 134) 60%, rgb(4, 0, 49) 100%);
+    margin: 0;
 }
 
 .contenedorTexto {
@@ -162,7 +173,7 @@ section h1#titulo {
     border: 2px solid rgba(255, 255, 255, 0.205);
     filter: drop-shadow(10px 20px 10px rgba(0, 0, 0, 0.486));
     height: 80%;
-    align-content: center;
+    text-align: center;
 }
 
 .textoFotos {
@@ -174,7 +185,8 @@ section h1#titulo {
 
 .tituloTexto1 {
     font-size: 65px;
-    margin-left: 70px;
+    width: 100%;
+    
     color: white;
     margin-top: 0;
 }
@@ -188,7 +200,7 @@ section h1#titulo {
     margin: 0;
     padding: 40px 0;
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 .contenedor {
@@ -208,6 +220,7 @@ section h1#titulo {
     scale: 1;
     margin: 0;
     animation: mover 15s infinite;
+    height: 100%;
 }
 
 
@@ -231,33 +244,33 @@ section h1#titulo {
 }
 
 @keyframes mover {
-    
+
     0%,
     20% {
         transform: translateX(0);
     }
-    
+
     25%,
     45% {
         transform: translateX(-100%);
     }
-    
+
     50%,
     70% {
         transform: translateX(-200%);
     }
-    
+
     75%,
     95% {
         transform: translateX(-300%);
     }
-    
+
     100% {
         transform: translateX(0);
     }
 }
 
-.tituloTarjetas{
+.tituloTarjetas {
     font-size: 70px;
     text-shadow: 0 0 30px black;
     text-decoration: underline;
@@ -265,13 +278,16 @@ section h1#titulo {
     text-underline-offset: 7px;
 
 }
+
 .tarjetasSeccion {
     text-align: center;
     color: white;
     width: 100%;
     justify-content: center;
-    overflow: hidden ;
-    
+    overflow: hidden;
+    height: auto;
+    padding-bottom: 90px;
+
 }
 
 .tarjetas {
@@ -291,6 +307,7 @@ section h1#titulo {
     transform: translateY(-10px);
     filter: drop-shadow(10px 20px 15px rgba(0, 0, 0, 0.692));
 }
+
 .tarjetas div {
     width: 47%;
     height: 400px;
@@ -302,34 +319,39 @@ section h1#titulo {
     padding: 0 5px;
     display: flex;
     justify-content: center;
-    text-align: justify;
+    text-align: center;
     font-size: 35px;
-    transition: transform 0.5s ;
+    transition: transform 0.5s;
+    align-items: center;
 }
-.tarjetas div.año{
+
+.tarjetas div.año {
     display: flex;
     background: none;
     filter: none;
     border: none;
     text-align: center;
     font-size: 90px;
-    justify-content: center; /* Horizontal */
-    align-items: center;     /* Vertical */
+    justify-content: center;
+    /* Horizontal */
+    align-items: center;
+    /* Vertical */
     padding: 0;
     margin: 0;
     text-shadow: 0 0 30px black;
 }
 
-.año h2{
-    transition: transform 0.5s ;
+.año h2 {
+    transition: transform 0.5s;
 }
-.año h2:hover{
+
+.año h2:hover {
     color: rgb(36, 36, 146);
-    text-shadow: 3px 3px #a3cfff85, 3px 3px 20px #ffffff85;
+    text-shadow: 2px 2px #a3cfff85, 0px 0px 10px #ffffff85;
     transform: translateY(-10px);
 }
 
-.linea{
+.linea {
     width: 5px;
     height: 190vh;
     background-color: white;
@@ -338,7 +360,7 @@ section h1#titulo {
     transform: translateX(-50%);
 }
 
-.punto{
+.punto {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -350,17 +372,21 @@ section h1#titulo {
     box-shadow: 0 0 20px #4da3ff;
 }
 
-.punto1{ top: 15%; }
-.punto2{ top: 40%; }
-.punto3{ top: 65%; }
-.punto4{ top: 90%; }
-
-.tarjeta2{
+.punto1 {
+    top: 15%;
 }
 
-.tarjeta4{
+.punto2 {
+    top: 40%;
 }
 
+.punto3 {
+    top: 65%;
+}
+
+.punto4 {
+    top: 90%;
+}
 
 
 
@@ -370,7 +396,6 @@ footer#contacto-footer {
     background-color: rgb(18, 11, 136);
     color: white;
     padding: 20px 0px;
-    margin-top: 60px;
     border-radius: 15px 15px 0 0;
 }
 
@@ -396,4 +421,205 @@ footer#contacto-footer {
 .atencion-footer {
     font-size: 18px;
     color: #cbd5e1;
+}
+
+.bloqueTres{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(150deg, rgb(9, 21, 65) 0%, rgb(4, 0, 49) 25%, rgb(10, 76, 197) 50%, rgb(22, 57, 134) 60%, rgb(4, 0, 49) 100%);
+    position: relative;
+}
+.salidaLaboral{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.salidaLaboral h2{
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 90px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 9px ;
+    padding: 3.5% 0;
+
+}
+
+
+.trabajos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    position: relative;
+    row-gap: 60px;
+    align-items: start;
+}
+.cuadrados{
+    width: 500px ;
+    height: 500px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.151);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.cuadrados:hover{
+    border: 2px solid rgba(255, 255, 255, 0.664);
+    padding-bottom: 335px;
+}
+.cuadrados:hover p.titulo{
+    opacity: 0;
+}
+.cuadrados p.titulo{
+    font-size: 40px;
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    text-shadow: 1px 1px 10px black;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+p.texto{
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+.cuadrados img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(55%);
+    transition: 0.3s ease;
+}
+.cuadrados img:hover{
+    filter: brightness(100%);
+}
+
+
+
+
+
+@media screen and (max-width: 1629px) {
+    section h1#titulo{
+        font-size: 150px;
+    }
+    .tituloTexto1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .textoFotos{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1535px) {
+    .linea{
+        display: none;
+    }
+    .tarjetas div.tarjeta {
+        width: 45%;
+    }
+    .tarjetas div{
+        font-size: 22px;
+        
+    }
+    .tarjetas div.año{
+        font-size: 70px;
+    }
+    .trabajos{
+        grid-template-columns: repeat(2,1fr);
+    }
+    p.texto{
+        font-size: 27px;
+    }
+    .cuadrados{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 1001px) {
+    section h1#titulo{
+        font-size: 100px;
+        top: 20%;
+    }
+    .subtitulo{
+        font-size: 30px;
+        text-align: center;
+        width: 90%;
+    }
+    .contenedor{
+        height: 70vh;
+        width: 70%;
+    }
+    .Imagenes{
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+        gap: 0;
+    }
+    .contenedorTexto{
+        margin-top: 50px;
+        width: 80%;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 841px) {
+    .trabajos{
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .salidaLaboral h2{
+        font-size: 70px;
+    }
+}
+@media screen and (max-width: 705px) {
+    .tituloTarjetas{
+        font-size: 60px;
+    }
+    .tarjetas div{
+        font-size: 18px;
+        
+    }
+    section h1#titulo{
+        font-size: 70px;
+    }
+    .subtitulo{
+        font-size: 25px;
+    }
+    .cuadrados{
+        width: 400px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 581px) {
+    .tarjetas{
+        padding: 10px;
+        column-gap: 2%;
+        row-gap: 10px;
+        height: auto;
+    }
+    .textoFotos{
+        font-size: 13px;
+    }
+    .tarjetas div{
+        width: 48%;
+        font-size: 15px;
+    }
+
+    .tarjetas div.año{
+        font-size: 45px;
+    }
+
+    .tituloTarjetas{
+        font-size: 45px;
+    }
 }

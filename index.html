@@ -12,8 +12,9 @@
 
 <body>
     <section class="contenedorNav">
-        <nav>
-            <ul>
+        <nav class="menucompleto" onclick="abrir()">
+            <div class="menu-btn" id="menuBtn">☰</div>
+            <ul class="menu" id="menu">
                 <li id="logocfp"><a href="https://cfp4.edu.ar/" target="_blank" rel="noopener noreferrer"><img
                             src="logocfp.png" alt="Logo CFP" id="Logo"></a></li>
                 <li class="textoOpcion"><a href="#principal">Inicio</a></li>
@@ -131,6 +132,13 @@
     <section class="bloqueTres">
         <section class="salidaLaboral" id="salidaLaboral">
             <h2>Salida Laboral</h2>
+            <div class="textoSalidaLaboral">
+                <p>Al finalizar la especialidad, los egresados adquieren los conocimientos teóricos y las habilidades
+                    prácticas necesarias para desempeñarse en distintos ámbitos del sector eléctrico. La formación
+                    recibida les permite participar en proyectos de instalación, mantenimiento, automatización y diseño
+                    eléctrico, tanto en empresas e industrias como desarrollando emprendimientos propios, adaptándose a
+                    las necesidades del mercado laboral actual.</p>
+            </div>
             <div class="trabajos">
                 <div class="cuadrados">
                     <p class="titulo">Instalaciones Eléctricas</p>
@@ -188,3 +196,4 @@
     </footer>
     <script src="p.js"></script>
 </body>
+</html>

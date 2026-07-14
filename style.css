@@ -17,7 +17,7 @@ a {
 }
 
 nav {
-    height: 6%;
+    height: 60px;
     width: 99%;
     background-color: rgba(6, 6, 30, 0.667);
     backdrop-filter: blur(8px);
@@ -25,7 +25,6 @@ nav {
     z-index: 99;
     margin: 10px auto auto;
     padding: 0px;
-    overflow: hidden;
     border-radius: 30px;
 }
 
@@ -45,8 +44,8 @@ nav ul li#logocfp {
     margin-right: 0px;
     list-style: none;
     background: rgb(255, 255, 255);
-    padding: 4px 10px 0px;
-    border-radius: 100px;
+    padding: 3px 10px 0px;
+    border-radius: 300px;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(36, 26, 111);
@@ -159,7 +158,6 @@ section h1#titulo {
     width: 100%;
     height: auto;
     position: relative;
-    overflow: hidden;
     background: linear-gradient(150deg, rgb(9, 21, 65) 0%, rgb(4, 0, 49) 25%, rgb(10, 76, 197) 50%, rgb(22, 57, 134) 60%, rgb(4, 0, 49) 100%);
     margin: 0;
 }
@@ -271,7 +269,7 @@ section h1#titulo {
 }
 
 .tituloTarjetas {
-    font-size: 70px;
+    font-size: 110px;
     text-shadow: 0 0 30px black;
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -295,7 +293,7 @@ section h1#titulo {
     position: relative;
     display: flex;
     width: 100%;
-    height: 200vh;
+    height: 1700px;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 50px;
@@ -353,7 +351,7 @@ section h1#titulo {
 
 .linea {
     width: 5px;
-    height: 190vh;
+    height: 1700px;
     background-color: white;
     position: absolute;
     left: 50%;
@@ -439,7 +437,7 @@ footer#contacto-footer {
     margin: 0;
     text-align: center;
     color: #ffffff;
-    font-size: 90px;
+    font-size: 110px;
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 9px ;
@@ -447,6 +445,17 @@ footer#contacto-footer {
 
 }
 
+.textoSalidaLaboral{
+    color: white;
+    margin: 0;
+    padding: 15px;
+}
+.textoSalidaLaboral p{
+    margin: 0;
+    padding-bottom: 50px;
+    text-align: justify;
+    font-size: 28px;
+}
 
 .trabajos{
     width: 100%;
@@ -456,6 +465,7 @@ footer#contacto-footer {
     position: relative;
     row-gap: 60px;
     align-items: start;
+    justify-items: center;
 }
 .cuadrados{
     width: 500px ;
@@ -503,9 +513,18 @@ p.texto{
     filter: brightness(100%);
 }
 
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
 
-
-
+.menu-btn {
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: #ffffff;
+}
 
 @media screen and (max-width: 1629px) {
     section h1#titulo{
@@ -539,10 +558,100 @@ p.texto{
     p.texto{
         font-size: 27px;
     }
+
     .cuadrados{
         width: 400px;
         height: 400px;
     }
+
+    .textoSalidaLaboral p{
+        font-size: 20px;
+    }
+    nav ul li.textoOpcion {
+        font-size: 20px;
+    }
+}
+
+@media (max-height:725px){
+
+    #titulo{
+        font-size:120px;
+        top:8%;
+    }
+
+    .subtitulo{
+        font-size:24px;
+        bottom:1%;
+    }
+
+}
+
+@media screen and (max-width: 1148px) {
+
+    .menu {
+        display: none;
+    }
+
+    ul#menu.menu.desactivado {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .menu-btn {
+        position: static;
+        z-index: 99;
+        display: block;
+        padding-left: 10%;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        z-index: 10;
+        border-radius: 20px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu.active li {
+        flex-wrap: wrap;
+        padding: 10px;
+        background: #010227ee;
+        width: 40%;
+        margin: 0;
+        border-radius: 40px;
+        font-size: 24px;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.534);
+        outline: 1px solid #000;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+
+    nav,
+    nav ul,
+    nav ul li {
+        margin: 0;
+    }
+
+    ul#menu.menu.active {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
 }
 @media screen and (max-width: 1001px) {
     section h1#titulo{
@@ -571,6 +680,12 @@ p.texto{
     }
 }
 @media screen and (max-width: 841px) {
+    .Imagenes{
+        padding-top: 70px;
+    }
+    .tituloTarjetas{
+        padding-top: 20px;
+    }
     .trabajos{
         width: 100%;
         align-items: center;
@@ -579,6 +694,15 @@ p.texto{
     }
     .salidaLaboral h2{
         font-size: 70px;
+        padding-top: 50px;
+    }
+
+    .cuadrados p.titulo{
+        font-size: 30px;
+    }
+    
+    .tarjetas div {
+        height: 300px;
     }
 }
 @media screen and (max-width: 705px) {
@@ -601,6 +725,12 @@ p.texto{
     }
 }
 @media screen and (max-width: 581px) {
+    section h1#titulo {
+        font-size: 60px;
+    }
+    p.texto{
+        font-size: 23px;
+    }
     .tarjetas{
         padding: 10px;
         column-gap: 2%;
@@ -614,7 +744,10 @@ p.texto{
         width: 48%;
         font-size: 15px;
     }
-
+    .cuadrados{
+        width: 300px;
+        height: 200px;
+    }
     .tarjetas div.año{
         font-size: 45px;
     }

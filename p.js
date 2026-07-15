@@ -14,10 +14,7 @@ const observer = new IntersectionObserver((entradas) => {
 
         if (entrada.isIntersecting) {
             entrada.target.classList.add("visible");
-        } else {
-            entrada.target.classList.remove("visible");
-        }
-
+        } 
     });
 
 }, {

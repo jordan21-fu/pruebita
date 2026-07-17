@@ -883,6 +883,10 @@ section.continuarEstudio h2,.continuarEstudio h3{
         padding-top: 50px;
     }
     
+    .cuadrados p.texto{
+        font-size: 20px;
+    }
+
     .cuadrados p.titulo{
         font-size: 30px;
     }
@@ -934,8 +938,9 @@ section.continuarEstudio h2,.continuarEstudio h3{
 @media screen and (max-width: 581px) {
     .listas {
         width: 100%;
-        justify-items: center;
+        align-items: center;
         display: block;
+        margin: auto;
     }
     .continuarEstudio h4{
         font-size: 29px;

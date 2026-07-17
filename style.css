@@ -884,7 +884,7 @@ section.continuarEstudio h2,.continuarEstudio h3{
     }
     
     .cuadrados p.texto{
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .cuadrados p.titulo{
@@ -940,7 +940,7 @@ section.continuarEstudio h2,.continuarEstudio h3{
         width: 100%;
         align-items: center;
         display: block;
-        margin: auto;
+        padding: 9%;
     }
     .continuarEstudio h4{
         font-size: 29px;

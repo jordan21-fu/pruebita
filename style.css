@@ -107,10 +107,10 @@ section#principal {
 section h1#titulo {
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: 200px;
+    font-size: 120px;
     text-shadow: rgb(0, 0, 0) 3px 3px 10px;
     position: absolute;
-    top: 10%;
+    top: 25%;
     z-index: 2;
     margin: 0px;
     padding: 20px;
@@ -273,9 +273,6 @@ section h1#titulo {
 .tituloTarjetas {
     font-size: 110px;
     text-shadow: 0 0 30px black;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 7px;
     margin-bottom: 20px ;
 }
 
@@ -295,11 +292,12 @@ section h1#titulo {
     position: relative;
     display: flex;
     width: 100%;
-    height: 1700px;
+    height: 1100px;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 50px;
     column-gap: 5%;
+    row-gap: 10px;
     justify-content: center;
 }
 
@@ -310,7 +308,7 @@ section h1#titulo {
 
 .tarjetas div {
     width: 47%;
-    height: 400px;
+    height: 200px;
     background-color: rgba(8, 8, 65, 0.411);
     border-radius: 30px;
     border: 2px solid rgba(255, 255, 255, 0.205);
@@ -319,8 +317,8 @@ section h1#titulo {
     padding: 0 5px;
     display: flex;
     justify-content: center;
-    text-align: center;
-    font-size: 35px;
+    text-align: justify;
+    font-size: 25px;
     transition: transform 0.5s;
     align-items: center;
 }
@@ -331,7 +329,7 @@ section h1#titulo {
     filter: none;
     border: none;
     text-align: center;
-    font-size: 90px;
+    font-size: 60px;
     justify-content: center;
     /* Horizontal */
     align-items: center;
@@ -353,7 +351,7 @@ section h1#titulo {
 
 .linea {
     width: 5px;
-    height: 1700px;
+    height: 1150px;
     background-color: white;
     position: absolute;
     left: 50%;
@@ -373,19 +371,19 @@ section h1#titulo {
 }
 
 .punto1 {
-    top: 15%;
+    top: 14%;
 }
 
 .punto2 {
-    top: 40%;
+    top: 37%;
 }
 
 .punto3 {
-    top: 65%;
+    top: 59%;
 }
 
 .punto4 {
-    top: 90%;
+    top: 80%;
 }
 
 
@@ -410,9 +408,6 @@ section h1#titulo {
     text-align: center;
     color: #ffffff;
     font-size: 110px;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 9px ;
     padding: 3.5% 0;
     padding-bottom: 10px;
     
@@ -502,6 +497,7 @@ p.texto{
     color: #ffffff;
     text-align: center;
     margin: 0;
+    text-shadow: 5px 5px 15px#000;
 }
 .cuadrados img{
     width: 100%;
@@ -567,31 +563,20 @@ footer#contacto-footer {
 }
 .continuarEstudio h2{
     font-size: 70px;
-    text-decoration-line: underline;
-    text-decoration-thickness: px;
-    text-underline-offset: 7px;
 }
 
 .continuarEstudio h3{
     font-size: 50px;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 7px;
 }
 
 .continuarEstudio ul h2{
     font-size: 50px;
-    text-decoration-line: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 7px;
 }
 h4{
     text-align: center;
     font-size: 40px;
     text-shadow: 0 0 10px #000; 
-    text-decoration-line: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 7px;
+
 }
 
 .textoSeguirAprendiendo{
@@ -612,7 +597,7 @@ h4{
     background-color: #0000001f;
     border: 1px solid grey;
     border-radius: 30px;
-    box-shadow: 2px 7px 20px #000;
+    box-shadow: 2px 7px 20px #000000c4;
     padding: 0 5px;
     width: 24%;
     height: 500px;
@@ -620,6 +605,7 @@ h4{
     text-align: left;
     justify-items: center;
     font-size: 20px;
+    filter: drop-shadow(10px 20px 10px rgba(0, 0, 0, 0.603));
 }
 
 .listas div ul li{
@@ -698,9 +684,6 @@ section.continuarEstudio h2,.continuarEstudio h3{
     .tarjetas div{
         font-size: 22px;
         
-    }
-    .tarjetas div.año{
-        font-size: 70px;
     }
     .trabajos{
         grid-template-columns: repeat(2,1fr);
@@ -817,6 +800,12 @@ section.continuarEstudio h2,.continuarEstudio h3{
     }
     
 }
+@media screen and (max-width: 1031px) {
+    .tarjetas div{
+        font-size: 18px;
+        
+    }
+}
 @media screen and (max-width: 1001px) {
     section h1#titulo{
         font-size: 100px;
@@ -861,6 +850,7 @@ section.continuarEstudio h2,.continuarEstudio h3{
     .listas div{
         width: 50%;
     }
+    
 }
 @media screen and (max-width: 841px) {
     .continuarEstudio h4{
@@ -892,8 +882,11 @@ section.continuarEstudio h2,.continuarEstudio h3{
     }
     
     .tarjetas div {
-        height: 340px;
-        font-size: 17px;
+        height: 250px;
+        font-size: 16px;
+    }
+    .tarjetas div.año{
+        font-size: 40px;
     }
 }
 
@@ -919,10 +912,6 @@ section.continuarEstudio h2,.continuarEstudio h3{
     }
     .tituloTarjetas{
         font-size: 60px;
-    }
-    .tarjetas div{
-        font-size: 18px;
-        
     }
     section h1#titulo{
         font-size: 70px;
